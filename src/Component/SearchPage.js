@@ -4,10 +4,10 @@ import { update } from '../BooksAPI';
 
 function SearchPage(props) {
 
-    
   var books = props.books
   var Allbooks = props.Allbooks
-  
+  console.log(books)
+  if (books.error === 'empty query') return(<div>No Such book</div>)
   if ('books' in books){ }
   else{
     books = {"books" : books}
@@ -30,17 +30,21 @@ function SearchPage(props) {
     }
  }
 
+  const imagelink = (book) => {
+    if (("imageLinks" in book) ) return book.imageLinks.smallThumbnail
+    return "http://books.google.com/books/content?id=1wy49i-gQjIC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api" 
+}
+
 
   return (
     <div className="main">
       <h2 className="header">{props.title}</h2>
-      {props.title && <hr /> }
         {
             books["books"].map(book => (
             book.shelf === `${props.shelf}` || props.any != null ?
               <div key={book.id} className="books">
                 <div className="book">
-                  <img  className="book-cover" src={book.imageLinks.smallThumbnail} alt="img"/>
+                  <img  className="book-cover" src={imagelink(book)} alt="img"/>
                   <div className="dropdown">
                     <button className="btn dropdown btn-success btn-circle btn-xl course-circle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                       <svg className="arrow" fill="currentColor" strokeWidth="0" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg"><path d="M840.4 300H183.6c-19.7 0-30.7 20.8-18.5 35l328.4 380.8c9.4 10.9 27.5 10.9 37 0L858.9 335c12.2-14.2 1.2-35-18.5-35z"></path></svg>

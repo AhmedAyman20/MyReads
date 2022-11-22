@@ -1,3 +1,7 @@
+# MyReads App
+
+This App contains two pages, the first page is the main page that contain the books of the user and which shelf does it belongs. the user can also change the state of the self ("Currently Reading, Read, Want To Read") and the page will automatically update that change. The next Page is the search page, where the user can search of a book and add it to the list.
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

@@ -43,7 +43,7 @@ function Search() {
 
   const handleTextChange = (e) => {
     setText(e.target.value);
-    
+    if (text.length === 1) setBooks([])
   };
 
   const handleSubmit = (e) => {
@@ -83,7 +83,7 @@ function Search() {
           />
         </div>
       </form>
-      {Allbooks.length !== 0 && <SearchPage makeRender={makeRender} books={books} Allbooks={Allbooks} shelf="any" any = "true" />}
+      {books.length !== 0 && <SearchPage makeRender={makeRender} books={books} Allbooks={Allbooks} shelf="any" any = "true" />}
     </div>
 
   )
