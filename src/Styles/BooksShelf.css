@@ -1,0 +1,66 @@
+.main{
+    margin: 0px 20px;
+}
+.header{
+    text-align: left;
+    margin-bottom: 0px; 
+    font-weight:bolder;
+}
+
+.books{
+    display: inline-flex;
+    align-items: flex-end;
+    max-width: 135px;
+    margin: 0px 15px;    
+}
+
+.book{
+    list-style-type: none;
+   
+}
+
+.book-cover{
+    display: flex;
+    align-items: flex-end;
+}
+
+.book-title{
+    font-weight: 650;
+    font-size: 16px;
+    text-align: left;
+    position: relative;
+    bottom: 32px;
+
+}
+
+.book-authors{
+    color: gray;
+    font-weight: 400;
+    font-size: 13px;
+    text-align: left;
+    position: relative;
+    bottom: 32px;
+}
+
+.btn-circle.btn-xl.course-circle {
+    width: 40px;
+    height: 40px;
+    border-radius: 10000px;
+    font-size: 15px;
+    text-align: center;
+    position: relative;
+    top: -32px;
+    left: 52px;
+}
+
+.arrow{
+    width: 12px;
+    position: relative;
+    left: -5px;
+    top: -5px;
+    fill:white
+}
+
+.dropdown-item{
+    margin-bottom: 0;
+}

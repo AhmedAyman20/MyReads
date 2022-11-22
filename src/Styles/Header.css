@@ -1,0 +1,12 @@
+.maindiv{
+    background-color: rgb(5, 148, 5);
+    height: 70px;
+}
+
+.content{
+    color: white;
+    font-size: 30px;
+    font-weight: 600;
+    padding-top: 10px;
+    margin: 0px;
+}
