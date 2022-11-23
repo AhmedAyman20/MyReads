@@ -7,8 +7,8 @@ function SearchPage(props) {
   var books = props.books
   var Allbooks = props.Allbooks
   console.log(books)
-  if (books.error === 'empty query') return(<div>No Such book</div>)
-  if ('books' in books){ }
+  if (books.books.error === 'empty query') return(<div>No Such book</div>)
+  if ('books' in books){}
   else{
     books = {"books" : books}
   }
@@ -34,7 +34,6 @@ function SearchPage(props) {
     if (("imageLinks" in book) ) return book.imageLinks.smallThumbnail
     return "http://books.google.com/books/content?id=1wy49i-gQjIC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api" 
 }
-
 
   return (
     <div className="main">
